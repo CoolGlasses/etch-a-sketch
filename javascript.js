@@ -1,11 +1,13 @@
 let gridColumns = 16;
 let gridRows = 16;
 
+function createGridContainer() {
+    let gridContainer = document.createElement("div");
+    gridContainer.setAttribute("id", "gridContainer");
+    document.getElementById("mainBox").appendChild(gridContainer);
+}
 
-let gridContainer = document.createElement("div");
-gridContainer.setAttribute("id", "gridContainer");
-document.getElementById("mainBox").appendChild(gridContainer);
-
+createGridContainer();
 
 
 function createBoard(gridRows, gridColumns) {
@@ -37,7 +39,9 @@ function createBoard(gridRows, gridColumns) {
 createBoard(gridRows, gridColumns);
 
 document.getElementById("resetButton").addEventListener("click", function(){
-    //Need to add Remove logic
+    let pleaseRemove = document.getElementById("gridContainer");
+    pleaseRemove.remove();
+    createGridContainer();
     let boardSize = prompt("How many squares per side?");
     createBoard(boardSize, boardSize);
 });
