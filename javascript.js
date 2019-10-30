@@ -4,10 +4,22 @@ let gridRows = 16;
 let gridContainer = document.createElement("div");
 gridContainer.setAttribute("id", "gridContainer");
 document.body.appendChild(gridContainer);
-        
-for (let i = 0; i < gridColumns; i++) {
-    var newDiv = document.createElement("div")
-    newDiv.textContent = "I am a square div!";
-    newDiv.setAttribute("id", i);
-    document.getElementById("gridContainer").appendChild(newDiv);
+
+function createBoard(gridRows, gridColumns) {
+    for (let k = 0; k < gridRows; k++) {
+        let columnContainer = document.createElement("div");
+        columnContainer.setAttribute("class", "column");
+        columnContainer.setAttribute("id", k);
+        document.getElementById("gridContainer").appendChild(columnContainer);
+
+        for (let i = 0; i < gridColumns; i++) {
+            var newDiv = document.createElement("div")
+            newDiv.textContent = "I am a column!";
+            newDiv.setAttribute("class", "row");
+            document.getElementById(k).appendChild(newDiv);
+        }
+    }
+
 }
+
+createBoard(gridRows, gridColumns);

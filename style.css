@@ -1,4 +1,32 @@
+body {
+    width: 500px;
+    background-color: cadetblue;
+}
+
 #gridContainer {
     display: flex;
-    column
+    background-color: burlywood;
+
 }
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid black; 
+    min-width: 0;
+
+}
+
+.row:hover {
+    background-color: navy;
+    color: gold;
+}
+
+.column {
+    flex: 1;
+    border: 1px solid black;
+    min-width: 0;
+}
+
