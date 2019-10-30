@@ -35,3 +35,9 @@ function createBoard(gridRows, gridColumns) {
 
 
 createBoard(gridRows, gridColumns);
+
+document.getElementById("resetButton").addEventListener("click", function(){
+    //Need to add Remove logic
+    let boardSize = prompt("How many squares per side?");
+    createBoard(boardSize, boardSize);
+});

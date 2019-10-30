@@ -3,6 +3,16 @@ body {
 
 }
 
+#headerBar {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+#resetButton {
+    display: flex;
+}
+
 #mainBox {
     display: flex;
     justify-content: center;
@@ -26,11 +36,6 @@ body {
     border: 1px solid black; 
     min-width: 0;
 
-}
-
-.row:hover {
-    background-color: navy;
-    color: gold;
 }
 
 .column {
