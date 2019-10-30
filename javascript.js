@@ -3,7 +3,7 @@ let gridRows = 16;
 
 let gridContainer = document.createElement("div");
 gridContainer.setAttribute("id", "gridContainer");
-document.body.appendChild(gridContainer);
+document.getElementById("mainBox").appendChild(gridContainer);
 
 function createBoard(gridRows, gridColumns) {
     for (let k = 0; k < gridRows; k++) {
@@ -14,7 +14,7 @@ function createBoard(gridRows, gridColumns) {
 
         for (let i = 0; i < gridColumns; i++) {
             var newDiv = document.createElement("div")
-            newDiv.textContent = "I am a column!";
+            newDiv.textContent = "i";
             newDiv.setAttribute("class", "row");
             document.getElementById(k).appendChild(newDiv);
         }

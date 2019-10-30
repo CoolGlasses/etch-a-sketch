@@ -1,12 +1,21 @@
 body {
-    width: 500px;
     background-color: cadetblue;
+
+}
+
+#mainBox {
+    display: flex;
+    justify-content: center;
 }
 
 #gridContainer {
     display: flex;
-    background-color: burlywood;
-
+    background-color: gray;
+    max-width: 600px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
 }
 
 
