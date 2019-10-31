@@ -1,3 +1,10 @@
+:root {
+    --rowNum: 16;
+    --colNum: 16;
+    --gridHeight: 600px;
+    --gridWidth:  600px;
+}
+
 body {
     background-color: cadetblue;
 
@@ -19,28 +26,10 @@ body {
 }
 
 #gridContainer {
-    display: flex;
+    display: grid;
     background-color: gray;
-    max-width: 600px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-grow: 1;
+    grid-template-columns: repeat(var(--colNum), auto);
+    grid-template-rows: repeat(var(--rowNum), var(--gridHeight));
 }
 
-
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border: 1px solid black; 
-    min-width: 0;
-
-}
-
-.column {
-    flex: 1;
-    border: 1px solid black;
-    min-width: 0;
-}
 
